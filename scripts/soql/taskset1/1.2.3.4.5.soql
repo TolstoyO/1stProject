@@ -1,0 +1,42 @@
+//1. Write a SOQL SELECT statement to retrieve the Company ,Name, Email fields for all Lead records 
+//where the Status is Open - Not Contacted. 
+//Sort the result by Name
+//SELECT Company, Name, Email
+  //FROM Lead
+  //WHERE Status = 'Open'
+  //ORDER BY Name
+
+  //2. Write a SOQL SELECT statement to retrieve all records from the Lead object, including Name ,Salutation, Title, 
+  //Company, Phone , State, Email 
+  // - Filter the result using below criteria 
+   //- State is not Null 
+//SELECT Name, Salutation, Company, Phone, State, Email
+ // FROM Lead
+  //WHERE State != Null
+
+ // 3. Write a SOQL SELECT statement to retrieve all records from the Lead object, including Name ,
+ //Country, Title, Company, Phone , State, Email 
+   //- Filter the result using below criteria 
+   //- State is FL or VA or MD 
+   //- or Country is France
+
+//SELECT Name, Country, Title, Company, Phone, State, Email
+ // FROM Lead
+ // WHERE State IN ('FL', 'MD', 'VA')  OR Country = 'France'
+
+//4. Write a SOQL SELECT statement to retrieve all records from the Lead object, including Name ,LeadSource,
+// Title, Company
+  // - Filter the result one by one using below criteria 
+   //- Title is CFO or CEO 
+   //- AND LeadSource is Web 
+//SELECT Name, LeadSource, Title, Company
+  //FROM Lead
+  //WHERE Title IN ( 'CFO', 'CEO' ) AND LeadSource = 'Web'
+
+  // 5. Write a SOQL SELECT statement to retrieve all records from the Lead object, including Name ,Fax,
+  // Title, Company
+ //- Filter the result using below criteria 
+ //- Fax is not NULL
+  SELECT Name,FAX,Title,Company 
+  FROM Lead
+  WHERE Fax != NULL

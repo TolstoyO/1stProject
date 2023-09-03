@@ -1,0 +1,50 @@
+//Task 6:
+//Write a SOQL query to retrieve the average ExpectedRevenue for all Opportunity records 
+//where the CloseDate is in the current year.
+//SELECT AVG (ExpectedRevenue)  FROM Opportunity
+//WHERE CloseDate = THIS_YEAR
+
+
+//Task 7:
+//Write a SOQL query to retrieve the sum of NumberOfEmployees for all Account records 
+//where the Type is 'Customer' and the Industry is 'Finance'.
+//SELECT SUM (NumberOfEmployees) FROM Account
+//WHERE Type = 'Customer' AND Industry =  'Finance'
+
+//Task 8:
+//Write a SOQL query to retrieve the minimum LastModifiedDate for all Lead records
+//where the Status is 'Open'.
+//SELECT MIN (LastModifiedDate) FROM Lead 
+//WHERE Status = 'Open'
+
+//Task 9:
+//Write a SOQL query to retrieve the average Amount for all Opportunity records
+//where the StageName is not equal to 'Closed Won'.
+//SELECT AVG(Amount) FROM Opportunity
+//WHERE StageName != 'Closed Won'
+
+
+//Task 12:
+//Write a SOQL query to 
+//retrieve the Industry, the maximum AnnualRevenue, and the count of Account records 
+//for each Industry where the maximum AnnualRevenue is greater than 1000000.
+//SELECT Industry, MAX (AnnualRevenue), COUNT (ID)  FROM Account
+//GROUP BY Industry
+//HAVING MAX (AnnualRevenue) > 100000
+
+//Task 13:
+//Write a SOQL query to 
+//retrieve the LeadSource, the average NumberOfEmployees, and the count of Lead records 
+//for each LeadSource where the average NumberOfEmployees is greater than 50.
+//SELECT LeadSource, AVG (NumberOfEmployees), COUNT(Id)  
+//FROM Lead
+//GROUP BY LeadSource
+//HAVING AVG (NumberOfEmployees)>50
+
+//Task 14:
+//Write a SOQL query to 
+//retrieve the StageName, the sum of Amount, and the count of Opportunity records 
+//for each StageName where the sum of Amount is greater than 1000000. 
+SELECT StageName, SUM(Amount), COUNT(Id) FROM Opportunity
+GROUP BY StageName
+HAVING SUM (Amount) > 1000000

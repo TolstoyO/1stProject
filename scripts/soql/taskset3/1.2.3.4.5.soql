@@ -1,0 +1,27 @@
+//Task 1:
+//Write a SOQL query to retrieve the maximum Amount for all Opportunity records.
+//SELECT  MAX(Amount) FROM Opportunity
+
+//Task 2:
+//Write a SOQL query to retrieve the minimum CreatedDate for all Case records.
+//SELECT MIN (CreatedDate) FROM Case
+
+//Task 3:
+//Write a SOQL query to retrieve the average NumberOfEmployees for all Account records 
+//where the Industry is 'Technology'.
+//SELECT AVG (NumberOfEmployees)  FROM Account
+//WHERE Industry = 'Technology'
+
+//Task 4:
+//Write a SOQL query to retrieve the sum of Amount for all Opportunity records
+// where the StageName is 'Closed Won'.
+//SELECT SUM (Amount) FROM Opportunity
+//WHERE StageName = 'Closed Won'
+
+//Task 5:
+//Write a SOQL query to retrieve the maximum CreatedDate for all Account records
+// where the Type is 'Prospect'.
+SELECT MAX (CreatedDate) FROM Account
+WHERE Type = 'Prospect'
+
+

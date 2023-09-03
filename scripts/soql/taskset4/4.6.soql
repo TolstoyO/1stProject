@@ -1,0 +1,17 @@
+
+//Task 4:
+//Write a SOQL SELECT statement to 
+//retrieve the Name , Account.Name and StageName fields 
+//for all Opportunity records associated with an Account Super Parent 
+//SELECT Name, StageName, Account.Name
+ // FROM Opportunity
+  //WHERE Account.Name = 'Super Parent'
+
+
+//Task 6:
+//Write a SOQL SELECT statement to 
+//retrieve the Subject , Contact.Name and Status fields 
+//for all Cases records associated with an Contact Super Jon
+SELECT Subject, Status, Contact.Name
+  FROM Case
+  WHERE Contact.Name = 'Super Jon'

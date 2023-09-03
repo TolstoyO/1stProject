@@ -1,0 +1,23 @@
+//1. Get Name, StageName of Opportunity isClosed (closed won/lost)
+//SELECT Name, StageName
+  //FROM Opportunity
+  //WHERE IsClosed = true 
+
+//2. Get the count of Opportunity for each isClosed (closed won|lost)
+//SELECT IsClosed, COUNT(Id)
+//FROM Opportunity
+//GROUP BY IsClosed
+
+//3. Get the count, Sum of all Amount for Opportunity each isWon (TRUE | FALSE) value
+//SELECT IsWon, COUNT(Id), SUM (Amount)
+  //FROM Opportunity
+ // GROUP BY IsWon
+
+// 4. Get the the CaseNumber, Status of Case NOT isClosed 
+//SELECT CaseNumber, Status FROM Case
+//WHERE isClosed = FALSE
+
+// 5. Get the count of Case isClosed (Closed status)
+SELECT COUNT(Id) FROM Case
+WHERE isClosed = TRUE
+
