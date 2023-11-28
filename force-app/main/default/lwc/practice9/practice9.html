@@ -1,0 +1,25 @@
+    <template>
+    <lightning-card title="Practice 9" icon-name="utility:toggle">
+        <div class = slds-var-m-around_medium>
+            <lightning-combobox
+            name="State"
+            label="State"
+            value={selectedValue}
+            placeholder="Select State"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+    
+<!--Conditional display below paragraph-->
+<!--if user selected either NY or IL Capital Area-->
+<template lwc:if={selectedValue}>
+    <p>Your selected value is: {selectedValue}</p>
+</template>
+
+<template lwc:if={isCapitalArea}>
+    <p>You have selected Capital Area</p>
+</template>
+
+        </div>
+    </lightning-card>
+</template>

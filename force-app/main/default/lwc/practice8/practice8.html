@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Practice 8" icon-name="utility:toggle">
+        <div class = slds-var-m-around_medium>
+        <lightning-input type="checkbox"  
+                         label="Hired" 
+                         checked ={hired} 
+                         onchange={handleHireChange}
+                         ></lightning-input>
+
+        <lightning-input type="checkbox" 
+                         label="Graduated" 
+                         checked={graduated} 
+                         onchange={handleGraduatedChange}
+                         ></lightning-input>
+
+        <lightning-input type="checkbox" 
+                         label="Promoted" 
+                         checked={promoted} 
+                         disabled></lightning-input>
+
+        <!--if Promoted: Congratulation you have been promoted-->
+        <template lwc:if={promoted}>
+            <h1>Congratulation you have been promoted!</h1>
+             </template>
+       <!--else if Graduated: You have been graduated  -->
+        <template lwc:elseif={graduated}>
+             <h1> You have been graduated!</h1>
+        </template>
+        <!--else if Hired: You are hired!-->
+        <template lwc:elseif={hired}>
+            <h1>You are hired!</h1>
+        </template>
+         <!--else Keep working hard! -->
+         <template lwc:else>
+            <h1>Keep working hard!</h1>
+         </template>
+
+
+        </div>
+
+    </lightning-card>
+    
+</template>
