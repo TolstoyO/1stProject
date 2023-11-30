@@ -1,0 +1,56 @@
+<template>
+    <lightning-card title="Lightning Layout" icon-name="standard:slider" variant="base">
+        <div class="slds-var-m-around_medium" >
+         <!--create lightning layout that has 2 items so we can have horizontal display of 2 elements-->
+        <lightning-layout pull-to-boundary="medium" >
+
+            <lightning-layout-item padding="around-small">
+                <lightning-input type="'text" label="First Name"></lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item  padding="around-small">
+                <lightning-input type="'text" label="Last Name"></lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item  padding="around-small">
+                <lightning-input type="'text" label="Company Name"></lightning-input>
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <lightning-button 
+                 
+                  label="Click Me" 
+                ></lightning-button>
+            </lightning-layout-item>
+
+
+        </lightning-layout>
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">1</div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">2</div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">3</div>
+            </lightning-layout-item>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">4</div>
+            </lightning-layout-item>
+        </lightning-layout>
+
+        <lightning-layout>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input type=" text" label=" First Name"></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="8" padding="around-small">
+            <lightning-button label="Search"> </lightning-button>
+            </lightning-layout-item>
+            
+        </lightning-layout>
+  
+        </div>
+    </lightning-card>
+ </template>
+ 
