@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Wired Apex Method with param Datatable" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">  
+             <lightning-slider 
+                
+               label="Volume" 
+               max="100000000"
+               min="0"
+               step="10000"
+               type="horizontal"
+               value={sliderValue}
+               variant="standard"
+               onchange={handleSliderChange}
+             ></lightning-slider>
+<br>
+             <!--conditionally display this datatable according to the  {myAccount.dta} actually has value-->
+             <template lwc:if={myAccounts.data}>
+             <lightning-datatable
+                key-field="id"
+                data={myAccounts.data}
+                columns={columns}
+            ></lightning-datatable>
+           </template>
+
+           <template lwc:if={myAccounts.error}>
+            <p>Error Occurred</p>
+           </template>
+           <pre>{myAccountsInStr} </pre>
+        </div>
+    </lightning-card>
+</template>
