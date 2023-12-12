@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title=" Opp Create Edit Form" icon-name="utility:form" variant="base">
+      <div class= "slds-var-m-around_medium">
+    
+        <lightning-record-form
+          
+          object-api-name={objectApiName}
+          record-id={recordId}
+          fields={fields}
+          onsuccess={showSuccess}
+          mode="edit"
+        ></lightning-record-form>
+          
+      </div>
+    </lightning-card>
+    </template>

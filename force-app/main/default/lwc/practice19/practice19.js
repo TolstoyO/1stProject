@@ -1,13 +1,46 @@
-import Jigsaw from "@salesforce/schema/Account.Jigsaw";
-import { LightningElement } from "lwc";
+import getAccountByName from "@salesforce/apex/AccountController.getAccountByName";
+import { LightningElement , wire} from "lwc";
 export default class Practice19 extends LightningElement {
-	person={
-        firstName: 'Ahmed',
-        lastName: 'P',
-        age: 48
+
+    searchInput = ''; 
+
+    handleSearchChange(event) {
+        this.searchInput = event.target.value; 
     }
 
-    get prettyPerson(){
-        return JSON.stringify(this.person, null, 2);
+
+    // wire the result of getAccountByName 
+    // into property called theAccount
+    @wire(getAccountByName, {accName:'$searchInput'} )
+    theAccount; 
+
+    get theAccountInStr() {
+        return JSON.stringify(this.theAccount, null, 2); 
     }
+    /**
+     * {
+        "data": {
+            "Id": "001Dm00000BNUqeIAH",
+            "Name": "GenePoint",
+            "AnnualRevenue": 30000000
+        }
+        }
+     */
+
+    
+    // person = {
+    //     firstName : 'Ahmed',
+    //     lastName : 'A',
+    //     age: 18, 
+    //     company: {
+    //         name: 'Tesla',
+    //         state: 'Texas'
+    //     }
+    // }; 
+    
+    // get prettyPerson() {
+    //     return JSON.stringify(this.person, null, 2);
+    // }
+
+
 }
