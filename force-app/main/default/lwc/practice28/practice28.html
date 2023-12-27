@@ -1,0 +1,28 @@
+<template>
+    <lightning-card  title="Account List with Delete option" icon-name="standard:account" variant="base">
+      <div class="slds-var-m-around_medium">
+        <template lwc:if={allAccounts.data}> 
+            <template for:each={allAccounts.data} for:item="each" > 
+        <!--get a list of accounts-->
+        <lightning-layout key={each.Id}>
+         <lightning-layout-item size=" 11" padding="around-small">
+            <p>Name: {each.Name}</p>
+          </lightning-layout-item>
+       
+        <lightning-layout-item size="1" padding="around-small">
+          <lightning-button-icon 
+            icon-name="utility:delete"
+            alternative-text="DELETE"
+            class="slds-m-left_xx-small"
+            onclick={handleDelete}
+            data-id={each.Id}
+          ></lightning-button-icon>
+
+        </lightning-layout-item>
+     </lightning-layout>
+    </template>
+</template>
+      </div>
+    </lightning-card>
+ </template>
+ 

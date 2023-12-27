@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Lifecycle Hook Example " icon-name="standard:account">
+
+        <div class="slds-var-m-around_medium">
+
+            <template lwc:if={showSpinner}>
+                <lightning-spinner alternative-text="loading" size="large"></lightning-spinner>
+            </template>
+            <template lwc:else>
+            </template>
+            <p class="slds-text-heading_large"> Lifecycle hook</p>
+
+
+        </div>
+    </lightning-card>
+
+</template>

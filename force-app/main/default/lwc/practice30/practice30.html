@@ -1,0 +1,19 @@
+<template>
+
+    <lightning-card title="Component composition" icon-name="standard:account">
+      <div class= "slds-var-m-around_medium">
+       <!--<c-practice3> </c-practice3>--> 
+    <lightning-input 
+      type="text"
+      label="To the child"
+      value={inputMsg}
+      onchange={handleChange}
+    ></lightning-input>
+
+        <c-practice30-child message ={inputMsg}
+                            num = "50"></c-practice30-child>
+        <c-practice30-child message = "Second message!!!"
+                            num = "100"></c-practice30-child>
+      </div>
+    </lightning-card>
+</template>
