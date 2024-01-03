@@ -1,9 +1,7 @@
+import LogDate from "@salesforce/schema/EventLogFile.LogDate";
 import { LightningElement, api } from "lwc";
 export default class FoodStand extends LightningElement {
-	oneItem ={
-		foodName:'sushi',
-		calorie: '500'
-	}
+	selectedFood = 'NONE';
 
 	foodArray = [
         { id: 1, foodName: 'Pizza', calories: 285 },
@@ -17,5 +15,10 @@ export default class FoodStand extends LightningElement {
         { id: 9, foodName: 'Steak', calories: 679 },
         { id: 10, foodName: 'Lobster', calories: 129 }
     ];
-	
+
+	handleChildPickEvent(event){
+		console.log('Parent has received the event ready to respond');
+		//console.log(event);
+		this.selectedFood = event.detail;
+	}
 }
